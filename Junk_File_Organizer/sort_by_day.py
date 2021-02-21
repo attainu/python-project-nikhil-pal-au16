@@ -3,7 +3,7 @@ import datetime
 from pathlib import Path
 
 
-class Timeandate:
+class SortByDay:
     def folderCreation(self, date_folder, DIR_PATH):
         for dates in date_folder:
             if dates == 0:
@@ -89,7 +89,7 @@ def DATESANDTIMES(DIR_PATH):
     only_files = []
     date_folder = [0, 10, 20, 30, 40, 60, 90]
     mvr = []
-    obj = Timeandate()
+    obj = SortByDay()
     obj.folderCreation(date_folder, DIR_PATH)
     obj.onlyfile(files, DIR_PATH, only_files)
     obj.totaldays(only_files, DIR_PATH, mvr)

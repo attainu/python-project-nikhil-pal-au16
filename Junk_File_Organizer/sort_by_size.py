@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 
-class Size:
+class SortBySize:
     def create_directory(self, size, DIR_PATH):
         for D in size:
             if D == 0:
@@ -81,7 +81,7 @@ def SIZEORG(DIR_PATH):
     sizer = []
     size = [0, 1048576, 10485760, 104857600, 524288000, 1073741274]
 
-    obj = Size()
+    obj = SortBySize()
     obj.create_directory(size, DIR_PATH)
     obj.size_calculation(ALL_FILES, DIR_PATH, sizer)
     obj.transfer(sizer, DIR_PATH)

@@ -1,10 +1,10 @@
-from exten import EXT
-from Timeandate import DATESANDTIMES
-from size import SIZEORG
+from sort_by_extension import EXT
+from sort_by_day import DATESANDTIMES
+from sort_by_size import SIZEORG
 import os
 
 
-class junkOrganizer:
+class FileOrganizer:
     def __init__(self):
         self.DIR_PATH = 'E:\\NIKHIL'+'\\'
         self.SRC_PATH = r'E:\\NIKHIL'+'\\'
@@ -32,7 +32,7 @@ def Dictionary(A, B):
 
 
 def inputChoice(A, B):
-    obj = junkOrganizer()
+    obj = FileOrganizer()
     if B == 1:
         obj.exten(A)
     if B == 2:

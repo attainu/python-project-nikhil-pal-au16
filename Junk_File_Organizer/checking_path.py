@@ -1,7 +1,7 @@
 import os
 
 
-class Checking:
+class CheckingPath:
     def file_check(self, SRC_PATH, DIR_PATH):
         for path, _, files in os.walk(SRC_PATH):
             if files:
@@ -23,6 +23,6 @@ def main(SRC_PATH, DIR_PATH):
     if not os.path.exists(SRC_PATH):
         print("Enter a valid path")
         return
-    obj = Checking()
+    obj = CheckingPath()
     obj.file_check(SRC_PATH, DIR_PATH)
     obj.folder_remove(DIR_PATH)

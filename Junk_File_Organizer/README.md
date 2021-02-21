@@ -1,5 +1,5 @@
 NOTE:
-as per instructors guidance flake8 extensions can be neglected while evaluation 
+As per instructors guidance flake8 extensions can be neglected while evaluation 
 
 
 # //////////////////////////////////

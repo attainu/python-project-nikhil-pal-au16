@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 
-class Exten:
+class SortByExtension:
     def extension(self, DIR_PATH, File_extension, ALL_FILES):
         for FILES in ALL_FILES:
             file_path = Path(FILES)
@@ -35,7 +35,7 @@ class Exten:
 def EXT(DIR_PATH):
     ALL_FILES = os.listdir(DIR_PATH)
     File_extension = []
-    obj = Exten()
+    obj = SortByExtension()
     obj.extension(DIR_PATH, File_extension, ALL_FILES)
     obj.directoryCreation(File_extension, DIR_PATH)
     obj.movables(ALL_FILES, DIR_PATH)

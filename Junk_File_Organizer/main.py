@@ -1,8 +1,8 @@
-from Checking import main
-from junkOrganizer import Dictionary
+from checking_path import main
+from file_organizer import Dictionary
 
 
-class Executable:
+class DriverCode:
     def __init__(self, path, y):
         self.DIR_PATH = path
         self.SRC_PATH = path
@@ -20,14 +20,14 @@ class Executable:
 
 if __name__ == "__main__":
     while True:
-        print("\nPress 1 to Organizing By Extension\n")
-        print("Press 2 to Organizing By Date\n")
-        print("Press 3 to Organizing By Size\n")
+        print("\nPress 1 to Sort By Extension\n")
+        print("Press 2 to Sort By Day\n")
+        print("Press 3 to Sort By Size\n")
         print("Press 'Q' or 'q' to exit\n")
         pathh = input("ENTER PATH\n")
         pathh = r''+pathh+'\\'
         if len(pathh) == 2:
             break
         choice = int(input("Enter Your Choice\n"))
-        obj = Executable(pathh, choice)
+        obj = DriverCode(pathh, choice)
         obj.Run()
