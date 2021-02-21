@@ -15,7 +15,7 @@ Here I come with the script that can organize the files in the library in differ
 ## Sorting features offered:
 1.	Sort by extension
 2.	Sort by size
-3.	Sort by Date Modified
+3.	Sort by Day
 
 Depending on the Choices displayed User give desired path as first input and then choice on the basis of choosen choice files are organized.
 
