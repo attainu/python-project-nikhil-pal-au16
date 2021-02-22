@@ -3,9 +3,9 @@ from pathlib import Path
 
 
 class SortByExtension:
-    def extension(self, dir_path, file_extension, ALL_FILES):
-        for FILES in ALL_FILES:
-            file_path = Path(FILES)
+    def extension(self, dir_path, file_extension, all_files):
+        for files in all_files:
+            file_path = Path(files)
             removind_dot = file_path.suffix.lower()
             removind_dot = removind_dot[1::]
             file_extension.append(removind_dot)
@@ -17,12 +17,12 @@ class SortByExtension:
             directories_path.mkdir(exist_ok=True)
 
     def movables(self, all_files, dir_path):
-        for FILES in all_files:
-            file_path = Path(FILES)
+        for files in all_files:
+            file_path = Path(files)
             exten = file_path.suffix.lower()
             exten = exten[1::]
             old_path = os.path.join(dir_path, file_path)
-            new_path = os.path.join(dir_path, exten, FILES)
+            new_path = os.path.join(dir_path, exten, files)
             os.rename(old_path, new_path)
 
     def extra_folder(self, dir_path):
@@ -33,10 +33,10 @@ class SortByExtension:
 
 
 def ext(dir_path):
-    ALL_FILES = os.listdir(dir_path)
+    all_files = os.listdir(dir_path)
     file_extension = []
     obj = SortByExtension()
-    obj.extension(dir_path, file_extension, ALL_FILES)
+    obj.extension(dir_path, file_extension, all_files)
     obj.directory_creation(file_extension, dir_path)
-    obj.movables(ALL_FILES, dir_path)
+    obj.movables(all_files, dir_path)
     obj.extra_folder(dir_path)
