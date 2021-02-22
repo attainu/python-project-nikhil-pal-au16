@@ -1,43 +1,43 @@
-from sort_by_extension import EXT
-from sort_by_day import DATESANDTIMES
-from sort_by_size import SIZEORG
+from sort_by_extension import ext
+from sort_by_day import date_and_time
+from sort_by_size import size_org
 import os
 
 
 class FileOrganizer:
     def __init__(self):
-        self.DIR_PATH = 'E:\\NIKHIL'+'\\'
-        self.SRC_PATH = r'E:\\NIKHIL'+'\\'
+        self.dir_path = 'E:\\NIKHIL'+'\\'
+        self.src_path = r'E:\\NIKHIL'+'\\'
 
-    def exten(self, v):
-        EXT(v)
+    def extension(self, v):
+        ext(v)
 
-    def DATES(self, v):
-        DATESANDTIMES(v)
+    def day(self, v):
+        date_and_time(v)
 
-    def SIZE(self, v):
-        SIZEORG(v)
+    def size(self, v):
+        size_org(v)
 
 
-def Dictionary(A, B):
-    d = {1: "ORGANISE BY Extension\n",
-         2: "ORGANISE BY DATE\n",
-         3: "ORGANISE BY SIZE\n"}
+def dictionary(A, B):
+    d = {1: "Sort By Extension\n",
+         2: "Sort By Day\n",
+         3: "Sort By Size\n"}
     if len(A) == 1 or len(A) == 0:
         return
     if not os.path.exists(A):
         return
-    inputChoice(A, B)
+    input_choice(A, B)
     print(d[B])
 
 
-def inputChoice(A, B):
+def input_choice(A, B):
     obj = FileOrganizer()
     if B == 1:
-        obj.exten(A)
+        obj.extension(A)
     if B == 2:
-        obj.DATES(A)
+        obj.day(A)
     if B == 3:
-        obj.SIZE(A)
+        obj.size(A)
     if B > 3:
         print("your selection is not valid")

@@ -1,21 +1,21 @@
 from checking_path import main
-from file_organizer import Dictionary
+from file_organizer import dictionary
 
 
 class DriverCode:
     def __init__(self, path, y):
-        self.DIR_PATH = path
-        self.SRC_PATH = path
+        self.dir_path = path
+        self.src_path = path
         self.choice = y
         if y >= 5:
             print("Enter the Valid Choice")
             return
-        main(self.SRC_PATH, self.DIR_PATH)
+        main(self.src_path, self.dir_path)
 
-    def Run(self):
+    def run(self):
         if self.choice >= 4:
             return
-        Dictionary(self.DIR_PATH, self.choice)
+        dictionary(self.dir_path, self.choice)
 
 
 if __name__ == "__main__":
@@ -30,4 +30,4 @@ if __name__ == "__main__":
             break
         choice = int(input("Enter Your Choice\n"))
         obj = DriverCode(pathh, choice)
-        obj.Run()
+        obj.run()
